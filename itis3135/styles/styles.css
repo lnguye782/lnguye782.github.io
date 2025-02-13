@@ -9,24 +9,14 @@ body{
     min-height: 100vh;
     margin: 0;
 }
-.dialog {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid #000;
-    background-color: white;
-    padding: 20px;
-    z-index: 1000; /* Ensures it's above other elements */
-  }
 
 a {
     color:rgb(61, 11, 243);
-    text-decoration: none;
+    font-size: 20px;
 }
 
 a:hover {
-    color: crimson;
+    color: rgb(231, 30, 16);
 }
 
 main {
@@ -41,7 +31,7 @@ h2{
 }
 
 img{
-    width: 60%;
+    width: 50%;
 }
 
 figure{
@@ -49,10 +39,14 @@ figure{
     font-style: italic;
 }
 
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* background-color: #f4e2a4; /* Matching background */
-    padding: 10px;
+footer {
+    background-color: #25c04c;
+    color: white;
+    padding: 15px;
+    margin-top: auto;
+}
+
+div ul {
+    list-style-type: none;
+    padding: 0;
 }
