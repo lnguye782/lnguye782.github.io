@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobby - Photography</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f4; 
+            color: #333; 
+        }
+        header, nav, main, footer {
+            padding: 20px;
+            text-align: center; 
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none; 
+            color: #0073e6;
+            cursor: pointer;
+        }
+        .section {
+            display: none;
+        }
+        #home { 
+            display: block;
+        }
+        figure img { 
+            width: 80%; 
+            max-width: 500px; 
+            border-radius: 10px; 
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Photography</h1>
+        <nav>
+            <a onclick="showSection('home')">📸 Home</a> |
+            <a onclick="showSection('about')">📖 About Me</a> |
+            <a onclick="showSection('best_times')">⏳ Best Times</a> |
+            <a onclick="showSection('locations')">🌎 Best Locations</a> |
+            <a onclick="showSection('how')">🎥 How to Start</a> |
+            <a onclick="showSection('why')">❤️ Why I Love It</a>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="section">
+            <h2>What is Photography?</h2>
+            <p>Photography is the art of capturing moments and telling stories through images.</p>
+            <figure>
+                <img src="images/camera.jpg" alt="Camera">
+                <figcaption>A Sony camera ready for action.</figcaption>
+            </figure>
+        </section>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>I've been passionate about photography since childhood. Capturing emotions in a frame is magical.</p>
+            <figure>
+                <img src="images/me_with_camera.png" alt="Photographer">
+                <figcaption>Me, capturing New York city.</figcaption>
+            </figure>
+        </section>
+        <section id="best_times" class="section">
+            <h2>Best Times for Photography</h2>
+            <p>The golden hour—just after sunrise and before sunset—is the best time for stunning photos.</p>
+            <figure>
+                <img src="images/hanoi.jpg" alt="Photographer">
+                <figcaption>Capturing Hanoi city.</figcaption>
+            </figure>
+        </section>
+        <section id="locations" class="section">
+            <h2>Best Locations</h2>
+            <p>Some of the best places to shoot are national parks, historical sites, and bustling cityscapes.</p>
+            <figure>
+                <img src="images/vietnam.jpg" alt="Photographer">
+                <figcaption>Capturing Vietnam.</figcaption>
+            </figure>
+        </section>
+        <section id="how" class="section">
+            <h2>How I started Photography</h2>
+            <p>Start with my phone, learn composition, and experiment with lighting before investing in gear.</p>
+            <figure>
+                <img src="images/newyork.jpg" alt="Photographer">
+                <figcaption>Capturing Vietnam.</figcaption>
+            </figure>
+        </section>
+        <section id="why" class="section">
+            <h2>Why I Love Photography</h2>
+            <p>It allows me to express creativity and freeze unforgettable moments in time.</p>
+            <figure>
+                <img src="images/columbia.jpg" alt="Photographer">
+                <figcaption>Capturing Vietnam.</figcaption>
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <p>Designed by <a href="https://webpages.charlotte.edu/lnguye65/itis3135">Long Nguyen Firm</a> &copy; 2025</p>
+        <div class="validation-links">
+            <a href="https://validator.w3.org/check?uri=referer">
+                <img src="https://raw.githubusercontent.com/bradleytaunt/html5-valid-badge/refs/heads/master/html5-validator-badge.png" 
+                     alt="Valid HTML 5" style="border:0;width:88px;height:31px;">
+            </a>
+    
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" 
+                     src="https://jigsaw.w3.org/css-validator/images/vcss" 
+                     alt="Valid CSS!">
+            </a>
+    
+            <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/lnguye65/itis3135/hobby/">
+                <img style="border:0;width:88px;height:31px" 
+                     src="https://www.w3.org/WAI/WCAG22/wcag2.2AAA.png" 
+                     alt="Accessibility Validation">
+            </a>
+        </div>
+    </footer>
+    <script src="/lnguye65/itis3135/scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
