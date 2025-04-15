@@ -1,5 +1,26 @@
 let slideIndex = 1;
 
+function showSlides(n) {
+  const slides = $(".mySlides");
+  const dots = $(".demo");
+  const captionText = $("#caption");
+
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+
+  slides.hide();
+  dots.removeClass("active");
+
+  slides.eq(slideIndex - 1).show();
+  dots.eq(slideIndex - 1).addClass("active");
+  captionText.html(dots.eq(slideIndex - 1).attr("alt"));
+}
+
 $(document).ready(function () {
   showSlides(slideIndex);
 
@@ -14,21 +35,4 @@ function plusSlides(n) {
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = $(".mySlides");
-  let dots = $(".demo");
-  let captionText = $("#caption");
-
-  if (n > slides.length) { slideIndex = 1; }
-  if (n < 1) { slideIndex = slides.length; }
-
-  slides.hide();
-  dots.removeClass("active");
-
-  slides.eq(slideIndex - 1).show();
-  dots.eq(slideIndex - 1).addClass("active");
-  captionText.html(dots.eq(slideIndex - 1).attr("alt"));
 }

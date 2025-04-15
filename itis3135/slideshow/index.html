@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slideshow Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/slideshow.js" defer></script>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div data-include="includes/header.html"></div>
+  </header>
+  <main>
+    <h2 style="text-align:center">Slideshow Gallery of My Full Name</h2>
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 10</div>
+        <img src="images/laptop.jpeg" alt="L - for Laptop" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 10</div>
+        <img src="images/orange.jpg" alt="O - for Orange" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 10</div>
+        <img src="images/notebook.jpg" alt="N - for Notebook" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 10</div>
+        <img src="images/guitar.jpg" alt="G - for Guitar" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 10</div>
+        <img src="images/naruto.jpg" alt="N - for Naruto" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 10</div>
+        <img src="images/goku.jpg" alt="G - for Goku" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">7 / 10</div>
+        <img src="images/umbrella.jpg" alt="U - for Umbrella" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">8 / 10</div>
+        <img src="images/yarn.jpg" alt="Y - for Yarn" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">9 / 10</div>
+        <img src="images/egg.jpg" alt="E - for Egg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">10 / 10</div>
+        <img src="images/northcarolina.jpg" alt="N - for North Carolina" style="width:100%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="images/laptop.jpeg" onclick="currentSlide(1)" alt="L - for Laptop">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/orange.jpg" onclick="currentSlide(2)" alt="O - for Orange">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/notebook.jpg" onclick="currentSlide(3)" alt="N - for Notebook">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/guitar.jpg" onclick="currentSlide(4)" alt="G - for Guitar">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/naruto.jpg" onclick="currentSlide(5)" alt="N - for Naruto">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/goku.jpg" onclick="currentSlide(6)" alt="G - for Goku">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/umbrella.jpg" onclick="currentSlide(7)" alt="U - for Umbrella">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/yarn.jpg" onclick="currentSlide(8)" alt="Y - for Yarn">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/egg.jpg" onclick="currentSlide(9)" alt="E - for Egg">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/northcarolina.jpg" onclick="currentSlide(10)" alt="N - for North Carolina">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div data-include="includes/footer.html"></div>
+  </footer>
+
+  <script>
+    $(function(){
+      $('[data-include]').each(function(){
+        const file = $(this).data("include");
+        if (file) {
+          $(this).load(file);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
